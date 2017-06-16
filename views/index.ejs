@@ -1,0 +1,109 @@
+<%- include('layouts/header') %>
+
+<link rel="stylesheet" href="stylesheets/main.css">
+
+<%- include('partials/navbar') %>
+
+<!--
+<div class="picList">
+    <ul class="picList">
+        <%# products.forEach(function(product){ %>
+            <li><img src="/images/<%#= product.picUrl %>" ></li>
+        <%# }) %>
+    </ul>
+</div>
+-->
+<div id="warp">
+    <ul id="panel">
+
+        <li id="head">
+            <p>灯罩</p>
+
+            <div class="objs">
+                <div class="active obj"></div>
+                <div class="obj"></div>
+            </div>
+
+            <div class="mtls">
+                <div class="active mtl"></div>
+                <div class="mtl"></div>
+            </div>
+
+            <div>
+                <img class="texture" src="texture/texture1.jpg">
+                <img class="texture" src="texture/texture2.jpg">
+            </div>
+
+
+        </li>
+
+        <li id="body">
+            <p>灯杆</p>
+            <div class="objs">
+                <div class="active obj"></div>
+                <div class="obj"></div>
+            </div>
+            <div class="mtls">
+                <div class="active mtl"></div>
+                <div class="mtl"></div>
+            </div>
+
+        </li>
+
+        <li id="foot">
+            <p>灯座</p>
+            <div class="objs">
+                <div class="active obj"></div>
+                <div class="obj"></div>
+            </div>
+            <div class="mtls">
+                <div class="active mtl"></div>
+                <div class="mtl"></div>
+            </div>
+
+        </li>
+
+    </ul>
+
+
+</div>
+
+
+<div id='container'>
+</div>
+
+
+<script>
+    // products存储首屏路由查询数据库得到的模板变量
+    var products = [];
+
+    products[0] = {};
+    products[0].name = '<%- products[0].name %>';
+    products[0].objPath = '<%- products[0].objPath %>';
+    products[0].mtlPath = '<%- products[0].mtlPath %>';
+
+    products[1] = {};
+    products[1].name = '<%- products[1].name %>';
+    products[1].objPath = '<%- products[1].objPath %>';
+    products[1].mtlPath = '<%- products[1].mtlPath %>';
+
+    products[2] = {};
+    products[2].name = '<%- products[2].name %>';
+    products[2].objPath = '<%- products[2].objPath %>';
+    products[2].mtlPath = '<%- products[2].mtlPath %>';
+
+</script>
+
+<!-- 引入客户端脚本 -->
+<script src="libs/threejs/three.min.js"></script>
+<script src="libs/threejs/MTLLoader.js"></script>
+<script src="libs/threejs/OBJLoader.js"></script>
+<script src="libs/threejs/OrbitControls.js"></script>
+<script src="libs/threejs/TransformControls.js"></script>
+<script src="libs/threejs/stats.min.js"></script>
+
+<script src="js/init.js"></script>
+<script src="js/toggle.js"></script>
+
+
+<%- include('layouts/footer') %>

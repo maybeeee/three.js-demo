@@ -1,0 +1,32 @@
+<%- include('layouts/header') %>
+<link rel="stylesheet" type="text/css" href="stylesheets/form.css">
+<%- include('partials/navbar') %>
+
+<!-- flash中间件提示区域 -->
+<div class="container">
+
+    <% errors.forEach(function(error) { %>
+    <div class="alert alert-danger">
+        <%= error %>
+    </div>
+    <% }) %>
+
+    <% infos.forEach(function(info) {%>
+    <div class="alert alert-info">
+        <%= info %>
+    </div>
+    <% }) %>
+</div>
+
+<div class="container">
+
+    <form class="form-signin" role="form" method="post" action="/signup">
+        <h2 class="form-signin-heading">请注册</h2>
+        <input type="text" name='username' class="form-control" placeholder="请输入用户名" required>
+        <input type="password" name="password" class="form-control" placeholder="请输入密码" required>
+        <input type="submit" value="注册" class="btn btn-primary btn-block">
+    </form>
+
+</div>
+
+<%- include('layouts/footer') %>

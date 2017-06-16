@@ -1,0 +1,120 @@
+
+body, ul, li, p{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    overflow: hidden;
+    color: #8d9d9d;
+}
+
+li{
+    list-style: none;
+}
+
+p{
+    font-size: 15px;
+    height: 40px;
+    line-height: 40px;
+    font-family: 'Microsoft YaHei';
+}
+
+#warp{
+    width: 200px;
+    height: 600px;
+    position: fixed;
+    left: 200px;
+    top: 50%;
+    margin-top: -300px;
+    background: #000000;
+    border-radius: 10px;
+}
+
+#panel{
+    width: 200px;
+    height: 540px;
+    text-align: center;
+}
+
+#head，#body, #foot{
+    width: 200px;
+    height: 170px;
+}
+
+#head p, #body p,#foot p{
+    position: relative;
+}
+
+#head p:after, #body p:after, #foot p:after{
+    content: '';
+    width: 160px;
+    height: 1px;
+    display: block;
+    background: #ffffff;
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+    margin-bottom: 5px;
+}
+
+.objs div, .mtls div{
+    width: 54px;
+    height: 54px;
+    display: inline-block;
+    margin: 5px;
+    border: 2px solid #000000;
+}
+
+.texture{
+    width: 54px;
+    height: 54px;
+    margin: 5px;
+}
+
+.objs div{
+    background: url("/images/obj.png") 0 0 no-repeat;
+}
+
+.mtls div{
+    background: url("/images/mtl.png") 0 0 no-repeat;
+}
+
+#head .objs div:first-child{
+    background-position: 0 0;
+}
+
+#head .objs div:last-child{
+    background-position: -50px 0;
+}
+
+#body .objs div:first-child{
+    background-position: 0 -50px;
+}
+
+#body .objs div:last-child{
+    background-position: -50px -50px;
+}
+
+#foot .objs div:first-child{
+    background-position: 0 -100px;
+}
+
+#foot .objs div:last-child{
+    background-position: -50px -100px;
+}
+
+
+#head .mtls div:first-child, #body .mtls div:first-child, #foot .mtls div:first-child{
+    background-position: 0 0;
+}
+
+#head .mtls div:last-child, #body .mtls div:last-child, #foot .mtls div:last-child{
+    background-position: -50px 0;
+}
+
+#panel .active{
+    border-color: #ffffff;
+}
+
+
